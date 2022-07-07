@@ -7,8 +7,16 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
-}
+    let mas = str.split(' '); 
+    let res=[]; // записываем результат
+    
+    mas.forEach(function(word){
+      let firstLetter = word.slice(0,1);
+      res.push( firstLetter.toUpperCase() + word.slice(1) );
+    })
+    
+    return res.join(' ');  //превращаем массив ответа в строку, и выводим её
+  }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

@@ -9,7 +9,12 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    const fib = [0, 1];
+    while (fib.length < n) {
+        const newEl = fib[fib.length - 1] + fib[fib.length - 2];
+        fib.push(newEl);
+    }
+    return fib[n - 1];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

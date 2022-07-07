@@ -9,8 +9,19 @@
  *
 */
 
+
+const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+
 function findVowels(str) {
-    // Напишите код здесь
+  const newStr = str.toLowerCase();
+  let res = 0;
+
+  for (const ch of newStr) {
+    if (vowels.includes(ch)) {
+      res += 1;
+    }
+  }
+  return res;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
